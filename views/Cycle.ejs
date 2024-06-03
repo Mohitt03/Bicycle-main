@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park My Spot</title>
+    <link rel="stylesheet" href="/css/Admin.css">
+</head>
+
+<body>
+
+    <!-- Navbar  Section -->
+
+
+
+    <!-- 
+    <a class="a" href="/Reservation">Reservation</a>
+    <br><a class="a" href="/users">Users</a> -->
+
+
+
+
+
+    <table>
+        <tr>
+            <th>cycle_name</th>
+            <th>ID</th>
+            <th>cycle_img</th>
+            <th>Renting_price</th>
+            <th>Deposit</th>
+            <th>Cycle_rating</th>
+            <th>Dealer_name</th>
+            <th>City</th>
+            <th>Iframe_link</th>
+            <th>Dealer_rating</th>
+            <th>location</th>
+            <!-- <th>Features</th> -->
+            <th>CreatedAt</th>
+            <th>UpdatedAt</th>
+            <th><a href="/admin/create">Add cycle</a></th>
+        </tr>
+        <% datas.forEach(data=> { %>
+            <tr>
+                <td>
+                    <%= data.cycle_name %>
+                </td>
+                <td>
+                    <%= data._id %>
+                </td>
+                <td>
+                    <%= data.cycle_img %>
+                </td>
+                <td>
+                    <%= data.Renting_price %>
+                </td>
+                <td>
+                    <%= data.Deposit %>
+                </td>
+                <td>
+                    <%= data.Cycle_rating %>
+                </td>
+                <td>
+                    <%= data.Dealer_name %>
+                </td>
+                <td>
+                    <%= data.City %>
+                </td>
+                <td>
+                    <%= data.Iframe_link %>
+                </td>
+                <td>
+                    <%= data.Dealer_rating %>
+                </td>
+                <td>
+                    <%= data.location %>
+                </td>
+                <!-- <td>
+                    <%= data.Features %>
+                </td> -->
+                <td>
+                    <%= data.createdAt %>
+                </td>
+                <td>
+                    <%= data.updatedAt %>
+                </td>
+                <td>
+                    <a class="delete" href="/admin/cycle/<%= data._id %>">Delete</a>
+                    <br>
+                    <a class="delete" href="/admin/edit/<%= data._id %>">Edit</a>
+                </td>
+            </tr>
+
+            <% }); %>
+
+    </table>
+</body>
+
+</html>

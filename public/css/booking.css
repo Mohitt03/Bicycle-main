@@ -1,0 +1,78 @@
+.formdiv {
+    height: 400px;
+    background-color: rgba(128, 128, 128, 0.373);
+    margin: 120px 320px;
+    border: 1px solid rgba(128, 128, 128, 0.373);
+}
+
+.h {
+    padding: 7px 20px;
+}
+
+.hh3 {
+    font-weight: 300;
+}
+
+.m {
+    height: 290px;
+    background-color: white;
+}
+
+.m1 {
+    padding: 20px 30px;
+}
+
+.m1inner {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #6762628a;
+    padding: 5px 20px;
+}
+
+.pimg {
+    width: 100px;
+}
+
+.m2 {}
+
+.m2inner1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.mi1 {}
+
+.mi2 {
+    display: flex;
+}
+
+.m2inner2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.qw1 {}
+
+.qw2 {
+    display: flex;
+}
+
+.mh3 {
+    font-size: 01.3rem;
+    font-weight: 400;
+}
+
+.finput {
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid gray;
+    background-color: rgba(128, 128, 128, 0.533);
+}
+
+.fbtn {
+    width: 550px;
+    padding: 7px;
+    background-color: deepskyblue;
+    border: none;
+}

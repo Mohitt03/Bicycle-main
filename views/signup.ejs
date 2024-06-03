@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('./partials/head') %>
+    <title>Signup</title>
+</head>
+
+<body>
+  <%- include('./partials/nav') %>
+
+
+
+
+    <div class="form-box signup center">
+      <div class="form-content">
+        <h2>Register</h2>
+        <form style="text-align: center;" action="/user/signup" method="POST">
+          <div class="input-field">
+            <input type="text" id="fullName" name="fullName" aria-describedby="fullName" placeholder="Full Name"
+              required>
+          </div>
+          <div class="input-field">
+            <input type="email" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email"
+              required>
+          </div>
+          <div class="input-field">
+            <input type="password" name="password" placeholder="Password" id="exampleInputPassword1" required>
+          </div>
+          <button style="margin:  15px 0px;" type="submit">Submit</button>
+          <!-- <button type="submit">Sign Up</button> -->
+        </form>
+        <div class="bottom-link">
+          Already have an account?
+          <a href="/login" id="login-link">Login</a>
+        </div>
+      </div>
+    </div>
+    <%- include('./partials/scripts') %>
+</body>
+
+</html>

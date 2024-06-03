@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale  =1.0">
+  <title>Park My Spot</title>
+  <link rel="stylesheet" href="/css/addcycle.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      <%= heading %>
+    </h1>
+
+    <% if (locals.cycle) { %>
+      <form id="newPostForm" action="/admin/edit/<%= cycle._id %>" method="post">
+        <input type="text" name="cycle_name" placeholder="cycle Name" value="<%= cycle.cycle_name %>">
+        <input type="text" name="cycle_img" placeholder="Img" input value="<%= cycle.cycle_img %>">
+        <input type="number" name="Renting_price" placeholder="Renting price" value="<%= cycle.Renting_price %>">
+        <input type="number" name="Deposit" placeholder="Deposit" value="<%= cycle.Deposit %>">
+        <input type="text" name="Cycle_rating" placeholder="Cycle_rating" value="<%= cycle.Cycle_rating %>">
+        <input type="text" name="Dealer_name" placeholder="Dealer_name" input value="<%= cycle.Dealer_name %>">
+        <input type="text" name="City" placeholder="City" input value="<%= cycle.City %>">
+        <input type="text" name="Iframe_link" placeholder="iframe_link" value="<%= cycle.Iframe_link %>">
+        <input type="text" name="Dealer_rating" placeholder="Dealer_rating" value="<%= cycle.Dealer_rating %>">
+        <input type="text" name="location" placeholder="loacation" value="<%= cycle.location %>">
+        <input type="text" name="bike_type" placeholder="bike_type" input value="<%= cycle.specification.bike_type %>">
+        <input type="text" name="Age_Range" placeholder="Age_Range" value="<%= cycle.specification.Age_Range %>">
+        <input type="text" name="Brand" placeholder="Brand" value="<%= cycle.specification.Brand %>">
+        <input type="number" name="gear" placeholder="gear" value="<%= cycle.specification.gear %>">
+        <button class="full-width" type="submit">
+          <%= submit %>
+        </button>
+      </form>
+      <% } else{%>
+        <form id="newPostForm" action="/admin/create" method="post">
+          <input type="text" name="cycle_name" placeholder="Brand Name">
+          <input type="text" name="cycle_img" placeholder="Img" input>
+          <input type="number" name="Renting_price" placeholder="Renting Price">
+          <input type="number" name="Deposit" placeholder="Deposit">
+          <input type="text" name="Cycle_rating" placeholder="Cycle Rating">
+          <input type="text" name="Dealer_name" placeholder="Dealer Name">
+          <input type="text" name="City" placeholder="City">
+          <input type="text" name="Iframe_link" placeholder="Iframe link" input>
+          <input type="text" name="Dealer_rating" placeholder="Dealer Rating">
+          <input type="text" name="location" placeholder="Loacation">
+          <input type="text" name="bike_type" placeholder="bike_type">
+          <input type="text" name="Age_Range" placeholder="Age_Range">
+          <input type="text" name="Brand" placeholder="Brand">
+          <input type="number" name="gear" placeholder="gear">
+          <button class="full-width" type="submit">
+            <%= submit %>
+          </button>
+        </form>
+        <% } %>
+  </div>
+
+</body>
+
+</html>

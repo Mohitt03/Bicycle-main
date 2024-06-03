@@ -1,0 +1,24 @@
+<nav class="navbar">
+    <div class="div-img">
+        <img class="logo" src="/images/logo.png" alt="" srcset="">
+
+    </div>
+    <div class="navbar-div1">
+        <ul class="menu-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#About">About us</a></li>
+            <li><a class="alast" href="#Contact">Contact us</a></li>
+            <% if (locals.user) { %>
+
+                <% } %>
+                    <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+        </ul>
+
+    </div>
+    <div class="navbar-div2">
+        <div class="div-btn">
+            <button class="book nav-btn2 b "><a href="/user/reservations"
+                    class="logout login-btn">Reservations</a></button>
+        </div>
+
+</nav>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park My Spot</title>
+    <link rel="stylesheet" href="/css/Admin.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0px;
+        }
+
+        td {
+            max-width: -webkit-fill-available;
+            overflow-x: auto
+        }
+    </style>
+    <% if (datas.length===0) { %>
+        <h1>You have no past reservation</h1>
+        <% } else { %>
+            <table>
+
+                <% datas.forEach(data=> { %>
+                    <tr>
+                        <!-- <td>
+                            <%= data.User_Id %>
+                        </td>
+                        <td>
+                            <%= data.Cycle_Id %>
+                        </td> -->
+                        <td>
+                            Picking up:-  <%= data.Pickup.date1 %>
+                                <%= data.Pickup.time1 %>
+                        </td>
+                        <td>
+                            Droping of:-  <%= data.Droping.date2 %>
+                                <%= data.Droping.time2 %>
+                        </td>
+                        <td>
+                            <%= data.Renting_Time %>
+                        </td>
+                        <td>
+                            ₹<%= data.Price %>
+                        </td>
+                        <td>
+                            <%= data.Payment.Payment_Method %>
+                        </td>
+                        <td>
+                            <%= data.Payment.status %>
+                        </td>
+
+                        <td>
+                            <button class="book nav-btn1 b "><a class="logout login-btn"
+                                    href="/user/invoice/<%= data._id %>">Download Bill</a></button>
+                        </td>
+                    </tr>
+
+                    <% }); %>
+
+            </table>
+            <% } %>
+</body>
+
+</html>

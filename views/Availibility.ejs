@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Park My Spot</title>
+
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="\css\seemore.css">
+    <link rel="stylesheet" href="..\css\Availibility.css" type="text/css">
+</head>
+
+<body>
+
+
+
+
+
+    <% if (cycles.length===0) { %>
+        <h1>Item not found</h1>
+        <% } else { %>
+
+            <section class="sec1">
+                <div class="head-img">
+                    <div class="head-inner-div">
+                        <div class="head-inner-div2">
+                            <div class="logodiv">
+                                <h3>Sathi bicycle renting</h3>
+                            </div>
+                            <div>
+                                <h3>
+                                    Bicycles
+                                </h3>
+                                <p class="q">Home
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e8eaed">
+                                        <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                                    </svg>prodouts
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="Asec1 row">
+
+                <% cycles.forEach(cycle=> { %>
+
+                    <div class="col-lg-4 col-md-6">
+
+                        <div class="Asec1-div2">
+
+                            <div class="imgdiv">
+                                <a href="/user/seemore/<%=cycle._id%>">
+                                    <img class="cycle_img" src="<%= cycle.cycle_img %>" alt="" srcset="">
+                                </a>
+                            </div>
+                            <div class="Ainner-head-div2">
+                                <h3 class="h3">
+                                    <%=cycle.cycle_name%>
+                                </h3>
+                            </div>
+                            <div class="Ainner-head-div2">
+                                <h3 class="h3">
+                                    <%=cycle.Cycle_rating%> / 5
+                                </h3>
+                            </div>
+
+                            <div class="Ainner-head-div2">
+                                <p>Dealer Timings: 09:00 AM - 09:00 PM</p>
+                            </div>
+                            <div class="Ainner-head-div2">
+                                <h1>
+                                    ₹<%=cycle.Renting_price%>/hour
+                                </h1>
+                            </div>
+                            <div class="Ainner-head-div2">
+                                <div>
+                                    <h3 class="Asec1-div1-h3 link2"><a href="/user/seemore/<%=cycle._id%>"
+                                            class="Asec1-div1-h3-a">See More</a></h3>
+                                </div>
+                                <div>
+                                    <h3 class="Asec1-div1-h3 link2"><a href="/user/booking/<%=cycle._id %>"
+                                            class="Asec1-div1-h3-a">Rent</a></h3>
+                                </div>
+                            </div>
+                        
+
+
+                        </div>
+                    </div>
+
+                    <% }); %>
+
+            </section>
+            <% } %>
+</body>
+
+</html>

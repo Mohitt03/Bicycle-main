@@ -1,0 +1,231 @@
+/* See More */
+body {
+    font-family: sans-serif;
+    background-color: aliceblue
+}
+
+/* Section 1 */
+
+.sec1 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+
+}
+
+.head-img {
+    width: -webkit-fill-available;
+    height: 160px;
+    min-height: auto;
+    padding: 50px 0px;
+    background-image: url("/images/sub-page.jpg");
+    margin: 0px;
+}
+
+.head-inner-div {
+    position: relative;
+    bottom: 4px;
+    height: 114px;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+h3 {
+    text-align: center;
+    color: white;
+}
+
+p {
+    font-size: small;
+    color: white;
+}
+
+.head-inner-div2 {
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 7px;
+}
+
+
+/* Section 2 */
+
+
+.sec2 {
+    margin: 0;
+}
+
+.div1 {
+    display: flex;
+    justify-content: center;
+    height: 410px;
+}
+
+.imgdiv {
+    background: #fff;
+    border: 1px solid #eee;
+    padding-top: 10px;
+    width: 500px;
+}
+
+.rv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    padding: 10px 20px;
+    background-color: #80808075;
+}
+
+.mimg {
+    padding: 20px;
+    text-align: center;
+}
+
+.pimg {
+    width: 390px;
+}
+
+.feat {
+    width: 430px;
+    padding: 30px 40px 70px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fdiv1 {
+    padding: 30px 0px;
+
+}
+
+.feat p {
+    font-size: 15px;
+    color: black;
+    font-weight: 100;
+}
+
+.dealer {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+.dinner {
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.dbtn {
+    width: 100px;
+    color: gray;
+}
+
+
+/* Section 3 */
+
+.sec3 {
+    margin: 0;
+    background-color: aliceblue;
+    padding: 40px 0px;
+
+}
+
+.sec3-div1 {
+    text-align: left;
+    padding-left: 126px;
+}
+
+.sec3-div1_1 {
+    text-align: left;
+}
+
+.sec3-h3 {
+    text-align: left;
+    color: black;
+}
+
+.sec3-div2_1 {}
+
+.sec3-div1_2 {
+    padding: 20px;
+    background-color: #00aeef;
+    width: 934px;
+
+}
+
+.sec3-div2_2 {}
+
+.sec3-div2_3 {}
+
+.sec3P {
+    font-size: 20px;
+}
+
+.gray {
+    color: gray;
+    font-size: 25px;
+}
+
+
+/* Section 4 */
+
+.sec4 {
+    width: 1180px;
+    margin-bottom: 100px;
+    padding: 0px 120px;
+}
+
+.sec4-div1 {
+    background: white;
+    padding: 20px;
+}
+
+.h24 {}
+
+hr {
+    width: 600px;
+}
+
+.p4 {
+    color: black;
+    font-size: 16px;
+}
+
+.ftr {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 120px;
+    align-items: center;
+}
+
+.ftr1 {
+    width: 400px;
+}
+
+.col {
+    color: black;
+}
+
+.ftr2 {
+    width: 300px;
+    text-align: center;
+}
+
+.fp1 {
+    color: black;
+}
+
+.fp2 {
+    color: black;
+}
+
+.ftr3{
+    text-align: right;
+}

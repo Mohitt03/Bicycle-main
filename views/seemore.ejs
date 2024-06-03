@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See More</title>
+    <%- include('./partials/head') %>
+        <link rel="stylesheet" href="\css\seemore.css">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <%- include('./partials/nav2') %>
+
+        <section class="sec1">
+            <div class="head-img">
+                <div class="head-inner-div">
+                    <div class="head-inner-div2">
+                        <div class="logodiv">
+                            <h3>Sathi bicycle renting</h3>
+                        </div>
+                        <div>
+                            <h3>
+                                <%= cycle.cycle_name %>
+                            </h3>
+                            <p>Home
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#e8eaed">
+                                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                                </svg>prodouts<svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                                    viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                                    <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+                                </svg> prodout-Deatal
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sec2 ">
+            <div class="div1 ">
+                <div class="imgdiv ">
+                    <div class="rv">
+                        <h4>
+                            <%= cycle.Cycle_rating %> / 5
+                        </h4>
+                    </div>
+                    <div class="mimg"><img class="pimg" src="<%= cycle.cycle_img %>"></div>
+                </div>
+                <div class="feat ">
+                    <div class="fdiv1">
+                        <h2>Specification</h2>
+                    </div>
+                    <div class="fdiv2">
+                        <div class="row">
+                            <p class="col">Bike type</p>
+                            <p class="col"><%= cycle.specification.bike_type %></p>
+                        </div>
+                        <div class="row">
+                            <p class="col">Age Range</p>
+                            <p class="col"><%= cycle.specification.Age_Range %></p>
+                        </div>
+                        <div class="row">
+                            <p class="col">Brand</p>
+                            <p class="col"><%= cycle.specification.Brand %> </p>
+                        </div>
+                        <div class="row">
+                            <p class="col">Number of Speeds</p>
+                            <p class="col"><%= cycle.specification.gear %></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="dealer ">
+                    <div class="dinner">
+                        <div><img src="" alt="" srcset=""></div>
+                        <div>
+                            <%= cycle.Dealer_name %>
+                        </div>
+                        <div><iframe src="<%= cycle.Iframe_link %>"></iframe></div>
+                        <div>
+                            <%= cycle.Dealer_rating %> / 5
+                        </div>
+                        <div>
+                            <button class="book nav-btn1 dbtn"><a class="logout login-btn" href="<%= cycle.location %>">
+                                    Go to map</a></button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="sec3">
+            <div class="sec3-div1">
+                <div class="sec3-div1_1">
+                    <h3 class="sec3-h3">
+                        <p class="sec3P gray">Bicyle Pricing</p>
+                    </h3>
+                </div>
+                <div class="sec3-div1_2">
+                    <div class="sec3-div2_1">
+                        <p class="sec3P">
+                            <%= cycle.cycle_name %>
+                        </p>
+                    </div>
+                    <div class="sec3-div2_2">
+                        <p class="sec3P"> ₹<%= cycle.Renting_price%> /hour
+                        </p>
+                    </div>
+                    <div class="sec3-div2_3">
+                        <a class="logout login-btn" href="/user/booking/<%=cycle._id %>"><button
+                                class="book nav-btn1 dbtn">Rent now</button></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="sec4">
+            <div class="sec4-div1">
+                <h2 class="h24">Deposit Terms</h2>
+                <hr>
+                <p class="p4">Deposit Amount: Rs. <%= cycle.Deposit %>
+                </p>
+                <p class="p4">1. One Helmet will be given with the bike. Another will be available on request.</p>
+                <p class="p4">2. The security Deposit is refundable once we receive the bike in proper condition.</p>
+                <p class="p4">3. You need to submit an original ID proof and a photocopy of your driving license.</p>
+            </div>
+        </section>
+
+
+</body>
+
+</html>

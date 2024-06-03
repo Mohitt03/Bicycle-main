@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Park My Spot</title>
+    <link rel="stylesheet" href="/css/Admin.css">
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Renting ID</th>
+            <th>User_Id</th>
+            <th>Cycle_Id</th>
+            <th>Pickup</th>
+            <th>Droping</th>
+            <th>Renting_Time</th>
+            <th>Price</th>
+            <th>Payment Method</th>
+            <th>Payment Status</th>
+        </tr>
+        <% datas.forEach(data=> { %>
+            <tr>
+                <td><%= data._id %></td>
+                <td>
+                    <%= data.User_Id %>
+                </td>
+                <td>
+                    <%= data.Cycle_Id %>
+                </td>
+                <td>
+                    <%= data.Pickup.date1 %> <%= data.Pickup.time1 %>
+                </td>
+                <td>
+                    <%= data.Droping.date2 %> <%= data.Droping.time2 %>
+                </td>
+                <td>
+                    <%= data.Renting_Time %>
+                </td>
+                <td>
+                    <%= data.Price %>
+                </td>
+                <td>
+                    <%= data.Payment.Payment_Method %>
+                </td>
+                <td>
+                    <%= data.Payment.status %>
+                </td>
+                <td><a class="delete" href="/admin/renting/<%= data._id %>">Delete</a></td>
+            </tr>
+
+            <% }); %>
+
+    </table>
+</body>
+
+</html>
