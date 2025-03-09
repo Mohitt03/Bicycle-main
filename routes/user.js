@@ -272,10 +272,6 @@ router.get("/invoice/:id", async (req, res) => {
       stream.pipe(res);
     }
   });
+
 });
-
-
-
-
-
-module.exports = router;
+module.exports = router
