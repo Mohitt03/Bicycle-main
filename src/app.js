@@ -16,12 +16,12 @@ const {
 
 const app = express();
 const PORT = process.env.PORT || 8000;
-
+const MONGO_URI = process.env.MONGO_URI
 mongoose.set('strictQuery', true);
 mongoose
-  .connect("mongodb+srv://admin:1234@api.w1sen0x.mongodb.net/Bicyle_Main?retryWrites=true&w=majority")
+  .connect(MONGO_URI)
   .then((e) => console.log("MongoDB Connected"));
-  
+
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
 app.use(express.static(path.join(__dirname, "public")));
