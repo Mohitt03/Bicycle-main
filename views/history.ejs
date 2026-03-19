@@ -37,11 +37,11 @@
                             <%= data.Cycle_Id %>
                         </td> -->
                         <td>
-                            Picking up:-  <%= data.Pickup.date1 %>
+                            Picking up:- <%= data.Pickup.date1 %>
                                 <%= data.Pickup.time1 %>
                         </td>
                         <td>
-                            Droping of:-  <%= data.Droping.date2 %>
+                            Droping of:- <%= data.Droping.date2 %>
                                 <%= data.Droping.time2 %>
                         </td>
                         <td>
@@ -58,8 +58,8 @@
                         </td>
 
                         <td>
-                            <button class="book nav-btn1 b "><a class="logout login-btn"
-                                    href="/user/invoice/<%= data._id %>">Download Bill</a></button>
+                            <a class="logout login-btn" href="/user/invoice/<%= data._id %>"><button
+                                    class="book nav-btn1 b ">Download Bill</button></a>
                         </td>
                     </tr>
 

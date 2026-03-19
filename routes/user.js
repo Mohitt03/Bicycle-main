@@ -173,7 +173,7 @@ router.post("/Reservation", async (req, res) => {
     res.render("Reservationproc1", {
 
       cycle: req.session.cycle,
-      user: req.session.userData,
+      user: req.user,
       renting: {
         Price,
         TotalTime: TT,
@@ -243,35 +243,36 @@ router.post("/Booking", async (req, res) => {
 // History of reservations
 router.get("/reservations", requireLogin, async (req, res) => {
   const userData = req.session.userData;
-  const history = await Cycle_renting.find({ User_Id: userData._id })
+  const history = await Cycle_renting.find({ User_Id: req.user._id })
   return res.render("history", {
     datas: history
   });
 })
 
+const template = fs.readFileSync('./views/Invoice.ejs', 'utf-8');
+const compiledTemplate = ejs.compile(template);
 
 router.get("/invoice/:id", async (req, res) => {
+  try {
+    const cycle = await Cycle_renting.findById(req.params.id).lean(); // faster
 
-  const template = fs.readFileSync('./views/Invoice.ejs', 'utf-8');
+    const invoiceHtml = compiledTemplate(cycle);
 
-  // Compile the template
-  const compiledTemplate = ejs.compile(template);
+    pdf.create(invoiceHtml).toStream((err, stream) => {
+      if (err) {
+        return res.status(500).send('Error generating PDF');
+      }
 
-  // Example data (replace with your actual data)
-  const cycle = await Cycle_renting.findById(req.params.id)
-  // Generate the HTML string
-  const invoiceHtml = compiledTemplate(cycle);
-
-  // Generate PDF from HTML
-  pdf.create(invoiceHtml).toStream((err, stream) => {
-    if (err) {
-      res.status(500).send('Error generating PDF');
-    } else {
       res.setHeader('Content-Type', 'application/pdf');
       res.setHeader('Content-Disposition', 'attachment; filename="invoice.pdf"');
-      stream.pipe(res);
-    }
-  });
 
+      stream.pipe(res);
+    });
+
+  } catch (err) {
+    console.log(err);
+
+    res.status(500).send('Server Error');
+  }
 });
 module.exports = router
